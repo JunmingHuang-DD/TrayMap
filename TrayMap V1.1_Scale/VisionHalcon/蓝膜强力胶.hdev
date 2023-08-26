@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.0" halcon_version="11.0.0.1" cs="3782154494">
+<procedure name="main">
+<interface/>
+<body>
+<l>read_image (Image, 'D:/Images_Fail/UP_Label_Result_20160418212152901.png')</l>
+<l>_FindLabel (Image, outRegion, result)</l>
+<l>dev_display (Image)</l>
+<l>dev_set_draw('margin')</l>
+<l>dev_set_color ('blue')</l>
+<l>if (result[3] &gt; 0)</l>
+<l>    dev_display (outRegion)</l>
+<l>endif</l>
+</body>
+<docu id="main">
+<parameters/>
+</docu>
+</procedure>
+<procedure name="_FindLabel">
+<interface>
+<io>
+<par name="Image"/>
+</io>
+<oo>
+<par name="outRegion"/>
+</oo>
+<oc>
+<par name="result"/>
+</oc>
+</interface>
+<body>
+<l>result := [0, 0, 0, 0]</l>
+<l>edges_sub_pix (Image, Edges, 'canny', 3, 20, 40)</l>
+<c>*边缘找出外框和圆</c>
+<l>select_shape_xld (Edges, SelectedXLD2, 'area', 'and', 8000, 40000)</l>
+<l>count_obj (SelectedXLD2, Number1)</l>
+<c>*边缘找不到就阈值找</c>
+<l>if (Number1!=2)</l>
+<c>   </c>
+<l>    threshold (Image, Region2, 235, 255)</l>
+<l>    connection (Region2, ConnectedRegions)</l>
+<c>    *找中间圆，定中心</c>
+<l>    select_shape (ConnectedRegions, SelectedRegions, ['area','circularity'], 'and', [8000,0.8], [15000,0.9999])</l>
+<l>    count_obj (SelectedRegions, Number2)</l>
+<l>    if (Number2!=1)</l>
+<l>        return ()</l>
+<l>    endif</l>
+<l>    smallest_circle (SelectedRegions, Row4, Column4, Radius1)</l>
+<l>    gen_circle (Circle1, Row4, Column4, Radius1)</l>
+<l>    area_center (Circle1, Area2, Row5, Column5)</l>
+<c>    *找凸出位置外接圆定中心</c>
+<l>    select_shape (ConnectedRegions, SelectedRegions1, ['area','outer_radius'], 'and', [1000,25], [5000,50])</l>
+<l>    count_obj (SelectedRegions1, Number4)</l>
+<l>    if (Number4!=1)</l>
+<l>    return ()</l>
+<l>    endif</l>
+<l>    smallest_circle (SelectedRegions1, Row6, Column6, Radius2)</l>
+<l>    gen_circle (Circle2, Row6, Column6, Radius2)</l>
+<l>    area_center (Circle2, Area3, Row7, Column7)</l>
+<c>    *两个圆心连线与水平线的角度</c>
+<l>    angle_ll (Row5, Column5, Row5, Column5+800, Row5, Column5, Row7, Column7, Angle1)</l>
+<l>    tuple_deg (Angle1, Deg1)</l>
+<l>    gen_cross_contour_xld (Cross, Row5, Column5, 30, 0)</l>
+<c></c>
+<l>    concat_obj (Circle1, Cross, outRegion)</l>
+<c></c>
+<l>    result := [Column5, Row5, -Deg1, 1]</l>
+<l>return ()</l>
+<l>endif</l>
+<c>*确定外框之后外接矩形定中心</c>
+<l>select_shape_xld (SelectedXLD2, SelectedXLD, ['area','contlength'], 'and', [25000,500], [35000,900])</l>
+<l>count_obj (SelectedXLD, Number)</l>
+<l>if (Number!=1)</l>
+<l>    return ()</l>
+<l>endif</l>
+<l>gen_region_contour_xld (SelectedXLD, Region, 'filled')</l>
+<l>smallest_rectangle2 (Region, Row, Column, Phi, Length1, Length2)</l>
+<l>gen_rectangle2 (Rectangle, Row, Column, Phi, Length1, Length2)</l>
+<l>area_center (Rectangle, Area, Row1, Column1)</l>
+<c>*确定圆之后外接圆定中心</c>
+<l>select_shape_xld (SelectedXLD2, SelectedXLD1, ['area','circularity'], 'and', [8000,0.5], [15000,0.9999])</l>
+<l>count_obj (SelectedXLD1, Number3)</l>
+<l>if (Number3!=1)</l>
+<l>    return ()</l>
+<l>endif</l>
+<c></c>
+<l>gen_region_contour_xld (SelectedXLD1, Region1, 'filled')</l>
+<l>opening_circle (Region1, RegionOpening, 25)</l>
+<l>smallest_circle (RegionOpening, Row2, Column2, Radius)</l>
+<l>gen_circle (Circle, Row2, Column2, Radius)</l>
+<l>area_center (Circle, Area1, Row3, Column3)</l>
+<c>*矩形中心和圆心连线与水平线做角度</c>
+<l>* angle_ll (Row3, Column3, Row3, Column3+800, Row3, Column3, Row1, Column1, Angle)</l>
+<l>tuple_deg (Phi, Deg)</l>
+<l>gen_cross_contour_xld (Cross, Row3, Column3, 30, 0)</l>
+<c></c>
+<l>concat_obj (Rectangle, Cross, outRegion)</l>
+<c></c>
+<l>result := [Column3, Row3, -Deg, 1]</l>
+<l>return ()</l>
+<c></c>
+</body>
+<docu id="_FindLabel">
+<parameters>
+<parameter id="Image"/>
+<parameter id="outRegion"/>
+<parameter id="result"/>
+</parameters>
+</docu>
+</procedure>
+</hdevelop>

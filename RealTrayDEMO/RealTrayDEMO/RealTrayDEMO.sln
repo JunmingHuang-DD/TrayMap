@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealTrayDEMO", "RealTrayDEMO\RealTrayDEMO.csproj", "{CF3340BF-195A-4C2F-B8AD-42967DC7DD9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonUI", "CommonUI\CommonUI.csproj", "{A84A6D03-C9A7-4032-98A3-3A697E5E8078}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF3340BF-195A-4C2F-B8AD-42967DC7DD9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF3340BF-195A-4C2F-B8AD-42967DC7DD9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF3340BF-195A-4C2F-B8AD-42967DC7DD9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF3340BF-195A-4C2F-B8AD-42967DC7DD9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A84A6D03-C9A7-4032-98A3-3A697E5E8078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A84A6D03-C9A7-4032-98A3-3A697E5E8078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A84A6D03-C9A7-4032-98A3-3A697E5E8078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A84A6D03-C9A7-4032-98A3-3A697E5E8078}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

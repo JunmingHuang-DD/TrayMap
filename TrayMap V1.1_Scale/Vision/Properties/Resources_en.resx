@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CameraCab" xml:space="preserve">
+    <value>Camera Calibration Position</value>
+  </data>
+  <data name="CameraData" xml:space="preserve">
+    <value>Camera Basic Data</value>
+  </data>
+  <data name="CameraDir" xml:space="preserve">
+    <value>Camera Direction</value>
+  </data>
+  <data name="CameraMpp" xml:space="preserve">
+    <value>Camera MPP</value>
+  </data>
+  <data name="DescripAngel" xml:space="preserve">
+    <value>The Angle between the suction nozzle and the camera</value>
+  </data>
+  <data name="DescripCameraDir" xml:space="preserve">
+    <value>Within the camera's field of view, the image rotates clockwise in a positive direction</value>
+  </data>
+  <data name="DescripCenter" xml:space="preserve">
+    <value>The suction nozzle rotates at the center of the fixed camera position</value>
+  </data>
+  <data name="DescripDirection" xml:space="preserve">
+    <value>Whether the camera is aligned with the mechanical direction</value>
+  </data>
+  <data name="DescripMpp" xml:space="preserve">
+    <value>the camera's XY direction of suction nozzle's MPP</value>
+  </data>
+  <data name="DescripPick" xml:space="preserve">
+    <value>Related vision parameters of suction nozzle(pick)</value>
+  </data>
+  <data name="DescripPickerName" xml:space="preserve">
+    <value>suction nozzle name</value>
+  </data>
+  <data name="DescripPixel" xml:space="preserve">
+    <value>Photo taken of the suction nozzle at the current mechanical position</value>
+  </data>
+  <data name="DescripPlaceDn" xml:space="preserve">
+    <value>Place-Parameters of the down-looking camera</value>
+  </data>
+  <data name="DescripPlaceUp" xml:space="preserve">
+    <value>Place-Parameters of the up-looking camera</value>
+  </data>
+  <data name="DescripPos" xml:space="preserve">
+    <value>Suction nozzle to photograph the mechanical position</value>
+  </data>
+  <data name="DescripRDir" xml:space="preserve">
+    <value>R Whether the direction is consistent or not</value>
+  </data>
+  <data name="DescripTeachPos" xml:space="preserve">
+    <value>The camera position in which the picture is taken</value>
+  </data>
+  <data name="DescripVisionSettingsL" xml:space="preserve">
+    <value>Left suction nozzle vision parameters</value>
+  </data>
+  <data name="DescripVisionSettingsR" xml:space="preserve">
+    <value>Right suction nozzle vision parameters</value>
+  </data>
+  <data name="DescripXDir" xml:space="preserve">
+    <value>X Whether the direction is consistent or not</value>
+  </data>
+  <data name="DescripXMpp" xml:space="preserve">
+    <value>The X direction'pixel of the camera and the suction nozzle（MPP）</value>
+  </data>
+  <data name="DescripYDir" xml:space="preserve">
+    <value>Y Whether the direction is consistent or not</value>
+  </data>
+  <data name="DescripYMpp" xml:space="preserve">
+    <value>The Y direction'pixel of the camera and the suction nozzle（MPP）</value>
+  </data>
+  <data name="DisplayAngel" xml:space="preserve">
+    <value>Angel</value>
+  </data>
+  <data name="DisplayCameraDir" xml:space="preserve">
+    <value>Camera clockwise is positive</value>
+  </data>
+  <data name="DisplayCenter" xml:space="preserve">
+    <value>Center of rotation</value>
+  </data>
+  <data name="DisplayDirection" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="DisplayMpp" xml:space="preserve">
+    <value>MPP</value>
+  </data>
+  <data name="DisplayPick" xml:space="preserve">
+    <value>Pick Vision</value>
+  </data>
+  <data name="DisplayPickerName" xml:space="preserve">
+    <value>Suction Nozzle Name</value>
+  </data>
+  <data name="DisplayPixel" xml:space="preserve">
+    <value>Photo results</value>
+  </data>
+  <data name="DisplayPlaceDn" xml:space="preserve">
+    <value>Place-DnVision</value>
+  </data>
+  <data name="DisplayPlaceUp" xml:space="preserve">
+    <value>Place-UpVision</value>
+  </data>
+  <data name="DisplayPos" xml:space="preserve">
+    <value>Mechanical position</value>
+  </data>
+  <data name="DisplayRDir" xml:space="preserve">
+    <value>R-Dir</value>
+  </data>
+  <data name="DisplayTeachPos" xml:space="preserve">
+    <value>Photo Location</value>
+  </data>
+  <data name="DisplayVisionSettingsL" xml:space="preserve">
+    <value>Left Vision Param</value>
+  </data>
+  <data name="DisplayVisionSettingsR" xml:space="preserve">
+    <value>Right Vision Param</value>
+  </data>
+  <data name="DisplayXDir" xml:space="preserve">
+    <value>X-Dir</value>
+  </data>
+  <data name="DisplayXMpp" xml:space="preserve">
+    <value>X-Dir</value>
+  </data>
+  <data name="DisplayYDir" xml:space="preserve">
+    <value>Y-Dir</value>
+  </data>
+  <data name="DisplayYMpp" xml:space="preserve">
+    <value>Y-Dir</value>
+  </data>
+  <data name="FixedCameraData" xml:space="preserve">
+    <value>Fixed Camera Data Base</value>
+  </data>
+  <data name="VisionSettngs" xml:space="preserve">
+    <value>Vision Param</value>
+  </data>
+</root>

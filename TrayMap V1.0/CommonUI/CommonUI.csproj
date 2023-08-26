@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A84A6D03-C9A7-4032-98A3-3A697E5E8078}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonUI</RootNamespace>
+    <AssemblyName>CommonUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FastColoredTextBox">
+      <HintPath>.\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Motion">
+      <HintPath>..\Motion\bin\Debug\Motion.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buttons\GlassButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Buttons\GlassButton.designer.cs">
+      <DependentUpon>GlassButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buttons\RecessEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\RecessEditorControl.Designer.cs">
+      <DependentUpon>RecessEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buttons\RibbonMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Buttons\RibbonMenuButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Buttons\RibbonMenuRenderer2.cs" />
+    <Compile Include="Buttons\RoundButton.cs" />
+    <Compile Include="Buttons\VerticalString.cs" />
+    <Compile Include="ColoredTextOutput.cs" />
+    <Compile Include="ComboBoxExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="controlTeach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlTeach.Designer.cs">
+      <DependentUpon>controlTeach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DigitTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImageChangePictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IOContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IOContainer.Designer.cs">
+      <DependentUpon>IOContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MotionSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MotionSetting.Designer.cs">
+      <DependentUpon>MotionSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutlookGrid\DataSourceManager.cs" />
+    <Compile Include="OutlookGrid\OutlookGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OutlookGrid\OutlookGrid.Designer.cs">
+      <DependentUpon>OutlookGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutlookGrid\OutlookGridGroup.cs" />
+    <Compile Include="OutlookGrid\OutlookGridRow.cs" />
+    <Compile Include="RectBlock\RectangleBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RectBlock\RectangleBlock.Designer.cs">
+      <DependentUpon>RectangleBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RectBlock\RectTraySet.cs" />
+    <Compile Include="StackTray.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StackTray.Designer.cs">
+      <DependentUpon>StackTray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeachItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TeachItemControl.Designer.cs">
+      <DependentUpon>TeachItemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LineControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LineControl.Designer.cs">
+      <DependentUpon>LineControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextBoxConsole.cs" />
+    <Compile Include="Tray.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tray.Designer.cs">
+      <DependentUpon>Tray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrayEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrayEditor.Designer.cs">
+      <DependentUpon>TrayEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAxisState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAxisState.Designer.cs">
+      <DependentUpon>ucAxisState.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buttons\RecessEditorControl.resx">
+      <DependentUpon>RecessEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controlTeach.resx">
+      <DependentUpon>controlTeach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IOContainer.resx">
+      <DependentUpon>IOContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MotionSetting.resx">
+      <DependentUpon>MotionSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RectBlock\RectangleBlock.resx">
+      <DependentUpon>RectangleBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StackTray.resx">
+      <DependentUpon>StackTray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeachItemControl.resx">
+      <DependentUpon>TeachItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LineControl.resx">
+      <DependentUpon>LineControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tray.resx">
+      <DependentUpon>Tray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrayEditor.en.resx">
+      <DependentUpon>TrayEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrayEditor.resx">
+      <DependentUpon>TrayEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrayEditor.zh.resx">
+      <DependentUpon>TrayEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAxisState.resx">
+      <DependentUpon>ucAxisState.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filefind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome-session.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome-settings-font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go-first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gtk-paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gtk-remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kedit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoundButton.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoundButtonRecess0.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoundButtonRecess2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoundButtonRecess3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoundButtonRecess4.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoundButtonRecess5.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\software-update-300x300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\software-update-300x3001.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
